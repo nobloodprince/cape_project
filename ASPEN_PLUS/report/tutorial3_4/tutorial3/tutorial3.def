@@ -1,0 +1,10 @@
+INPUT: tutorial3.inm
+MODNAME: apmain
+RUNID: tutorial3
+NEW_RUNID: tutorial3
+OLD_RUNID: tutorial3
+PDF: tutorial3.appdf
+USERNAME: adity
+XMOD: C:\Program Files\AspenTech\Aspen Plus V12.0\Engine\xeq\apmain
+SPONLY:
+DBCONN: _4632zze.ads

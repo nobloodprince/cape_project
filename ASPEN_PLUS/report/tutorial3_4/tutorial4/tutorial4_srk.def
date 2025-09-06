@@ -1,0 +1,10 @@
+INPUT: tutorial4_srk.inm
+MODNAME: apmain
+RUNID: tutorial4_srk
+NEW_RUNID: tutorial4_srk
+OLD_RUNID: tutorial4_srk
+PDF: tutorial4_srk.appdf
+USERNAME: adity
+XMOD: C:\Program Files\AspenTech\Aspen Plus V12.0\Engine\xeq\apmain
+SPONLY:
+DBCONN: _1542tjj

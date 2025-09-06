@@ -1,0 +1,11 @@
+SLAVE:
+INPUT: _2751drc.inm
+MODNAME: apmain
+RUNID: _2751drc
+NEW_RUNID: _2751drc
+OLD_RUNID: _2751drc
+PDF: _2751drc.appdf
+USERNAME: adity
+XMOD: C:\Program Files\AspenTech\Aspen Plus V12.0\Engine\xeq\apmain
+SPONLY:
+DBCONN: _2751drc

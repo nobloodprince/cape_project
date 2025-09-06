@@ -1,0 +1,240 @@
+
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION REPORT                      + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 21, 2025      
+ VERSION: 38.0   Build 380                               FRIDAY      
+ INSTALLATION:                                           4:49:42 P.M.        
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE    I
+                                                                                
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+                               TABLE OF CONTENTS                                
+
+
+            RUN CONTROL SECTION....................................  1
+                 RUN CONTROL INFORMATION...........................  1
+
+            FLOWSHEET SECTION......................................  2
+                 FLOWSHEET CONNECTIVITY BY STREAMS.................  2
+                 FLOWSHEET CONNECTIVITY BY BLOCKS..................  2
+                 COMPUTATIONAL SEQUENCE............................  2
+                 OVERALL FLOWSHEET BALANCE.........................  2
+
+            PHYSICAL PROPERTIES SECTION............................  3
+                 COMPONENTS........................................  3
+
+            U-O-S BLOCK SECTION....................................  4
+                 BLOCK:  B1       MODEL: FLASH2....................  4
+
+            STREAM SECTION.........................................  5
+                 FEED PBOTTOM PTOP.................................  5
+
+            PROBLEM STATUS SECTION.................................  6
+                 BLOCK STATUS......................................  6
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 1       
+                                                                                
+                              RUN CONTROL SECTION                               
+
+ RUN CONTROL INFORMATION                 
+ -----------------------
+
+ THIS COPY OF ASPEN PLUS LICENSED TO INDIAN INSTITUTE OF TECH        
+
+ TYPE OF RUN: NEW 
+
+ INPUT FILE NAME: _2140zsl.inm
+
+ OUTPUT PROBLEM DATA FILE NAME: _2140zsl 
+ LOCATED IN:                    
+
+
+ PDF SIZE USED FOR INPUT TRANSLATION:
+   NUMBER OF FILE RECORDS (PSIZE) =     0
+   NUMBER OF IN-CORE RECORDS      =   256
+ PSIZE NEEDED FOR SIMULATION    =   256
+
+ CALLING PROGRAM NAME:          apmain  
+ LOCATED IN: C:\Program Files\AspenTech\Aspen Plus V12.0\Engine\\xeq
+
+ SIMULATION REQUESTED FOR ENTIRE FLOWSHEET
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 2       
+                                                                                
+                               FLOWSHEET SECTION                                
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+ ---------------------------------
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   FEED       ----       B1             PTOP       B1         ----    
+   PBOTTOM    B1         ----                                         
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+ --------------------------------
+
+   BLOCK        INLETS                         OUTLETS
+   B1           FEED                           PTOP PBOTTOM                
+
+ COMPUTATIONAL SEQUENCE                  
+ ----------------------
+
+ SEQUENCE USED WAS:
+    B1                                                                     
+
+ OVERALL FLOWSHEET BALANCE               
+ -------------------------
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    CONVENTIONAL COMPONENTS (KMOL/HR )
+       PROPANE                   60.0000         60.0000         0.00000    
+       N-BUTANE                  90.0000         90.0000         0.00000    
+       PENTANE                   30.0000         30.0000         0.00000    
+       HEXANE                    120.000         120.000         0.00000    
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            300.000         300.000         0.00000    
+       MASS(KG/HR   )            20382.7         20382.7         0.00000    
+       ENTHALPY(CAL/SEC )      -0.322419E+07   -0.254460E+07   -0.210780    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 3       
+                                                                                
+                          PHYSICAL PROPERTIES SECTION                           
+
+ COMPONENTS                              
+ ----------
+
+  ID       TYPE  ALIAS          NAME
+   PROPANE  C     C3H8           PROPANE                         
+   N-BUTANE C     C4H10-1        N-BUTANE                        
+   PENTANE  C     C5H12-1        N-PENTANE                       
+   HEXANE   C     C6H14-1        N-HEXANE                        
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 4       
+                                                                                
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B1       MODEL: FLASH2          
+ ------------------------------
+   INLET STREAM:          FEED    
+   OUTLET VAPOR STREAM:   PTOP    
+   OUTLET LIQUID STREAM:  PBOTTOM 
+   PROPERTY OPTION SET:   SYSOP0    IDEAL LIQUID / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            300.000         300.000         0.00000    
+       MASS(KG/HR   )            20382.7         20382.7         0.00000    
+       ENTHALPY(CAL/SEC )      -0.322419E+07   -0.254460E+07   -0.210780    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   TWO    PHASE  TP  FLASH
+   SPECIFIED TEMPERATURE C                                 121.111      
+   SPECIFIED PRESSURE    BAR                                 6.89476    
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+
+                           ***  RESULTS  ***
+   OUTLET TEMPERATURE    C                                    121.11    
+   OUTLET PRESSURE       BAR                                  6.8948    
+   HEAT DUTY             CAL/SEC                             0.67960E+06
+   VAPOR FRACTION                                             1.0000    
+
+
+
+   V-L PHASE EQUILIBRIUM : 
+
+      COMP              F(I)           X(I)           Y(I)           K(I)      
+      PROPANE          0.20000        0.25380E-01    0.20000         9.0653    
+      N-BUTANE         0.30000        0.10525        0.30000         3.2791    
+      PENTANE          0.10000        0.85627E-01    0.10000         1.3435    
+      HEXANE           0.40000        0.78374        0.40000        0.58713    
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 5       
+                                                                                
+                                 STREAM SECTION                                 
+
+ FEED PBOTTOM PTOP                               
+ -----------------
+
+ STREAM ID               FEED       PBOTTOM    PTOP    
+ FROM :                  ----       B1         B1      
+ TO   :                  B1         ----       ----    
+
+ SUBSTREAM: MIXED   
+ PHASE:                  MIXED      MISSING    VAPOR  
+ COMPONENTS: KMOL/HR         
+   PROPANE               60.0000     0.0       60.0000
+   N-BUTANE              90.0000     0.0       90.0000
+   PENTANE               30.0000     0.0       30.0000
+   HEXANE               120.0000     0.0      120.0000
+ TOTAL FLOW:         
+   KMOL/HR              300.0000     0.0      300.0000
+   KG/HR               2.0383+04     0.0     2.0383+04
+   L/MIN               3.0809+04     0.0     2.3772+04
+ STATE VARIABLES:    
+   TEMP   C              10.0000    MISSING   121.1111
+   PRES   BAR             1.0342     6.8948     6.8948
+   VFRAC                  0.2670    MISSING     1.0000
+   LFRAC                  0.7330    MISSING     0.0   
+   SFRAC                  0.0       MISSING     0.0   
+ ENTHALPY:           
+   CAL/MOL            -3.8690+04    MISSING -3.0535+04
+   CAL/GM              -569.4595    MISSING  -449.4286
+   CAL/SEC            -3.2242+06    MISSING -2.5446+06
+ ENTROPY:            
+   CAL/MOL-K           -118.2482    MISSING   -96.3902
+   CAL/GM-K              -1.7404    MISSING    -1.4187
+ DENSITY:            
+   MOL/CC              1.6229-04    MISSING  2.1033-04
+   GM/CC               1.1026-02    MISSING  1.4291-02
+ AVG MW                  67.9422    MISSING    67.9422
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 6       
+                                                                                
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed normally                                     *
+ *                                                                          *
+ * All Unit Operation blocks were completed normally                        *
+ *                                                                          *
+ * All streams were flashed normally                                        *
+ *                                                                          *
+ ****************************************************************************
