@@ -1,0 +1,10 @@
+INPUT: practice2.inm
+MODNAME: apmain
+RUNID: practice2
+NEW_RUNID: practice2
+OLD_RUNID: practice2
+PDF: practice2.appdf
+USERNAME: adity
+XMOD: C:\Program Files\AspenTech\Aspen Plus V12.0\Engine\xeq\apmain
+SPONLY:
+DBCONN: _2749lqr.ads

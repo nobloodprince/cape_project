@@ -1,0 +1,301 @@
+MM "38.0" FLAVOR "NO" VERSION "38.0" DATETIME "Fri Mar 21 15:29:36 2025" 
+MACHINE "WIN-NT/VC"  ; 
+startlibrary
+version1
+NumLibs = 4
+Built-In
+ACM Built-In
+ACM Models
+Hybrid Models
+NumCats = 12
+Mixers/Splitters
+active
+Separators
+active
+Exchangers
+active
+Columns
+active
+Reactors
+active
+Pressure Changers
+active
+Manipulators
+active
+Solids
+active
+Solids Separators
+active
+Controllers
+active
+Batch Models
+active
+User Models
+active
+endlibrary
+; 
+0
+? SETUP MAIN ? \ TITLE TITLE = "tutorial2" \ \ "RUN-CLASS" RUN-CLASS = 
+FLOWSHEET \ \ SIMULATE INTERACTIVE = NO MOLEFLOW = MOLEFLOW VISITED = 1 \ ? 
+SETUP GLOBAL ? \ "IN-UNITS" INSET = SI \ ? SETUP DIAGNOSTICS ? ? SETUP 
+"SIM-OPTIONS" ? ; "SI_MOLE" ; ? SETUP "UNITS-SET" METCBAR ? \ DESCRIPTION 
+DESCRIPTION = "User-defined units set" \ \ MMLOCAL \ \ UNITSET BASESET = MET 
+( 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 4 3 3 3 3 3 3 3 3 4 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 5 3 3 
+3 3 3 3 5 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 
+3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 3 7 3 3 3 3 3 3 3 3 3 3 ) \ ? SETUP 
+"ACCOUNT-INFO" ? \ ACCOUNT PROJECT-NAME = "CAPE LAB" USER-NAME = "ADITYA DEEP" 
+\ ? "DATA-SERVICE" ? ? DATABANKS ? ? COMPONENTS MAIN ? \ COMPONENTS CID = 
+AMMONIA ANAME = H3N OUTNAME = AMMONIA DBNAME1 = "AMMONIA" ANAME1 = "H3N" /  
+CID = WATER ANAME = H2O OUTNAME = WATER DBNAME1 = "WATER" ANAME1 = "H2O" \ ? 
+COMPONENTS "ADA/PCS" "LE-PROP-DATA" ? ; "SI_MOLE" ; ? COMPONENTS "COMP-LIST" 
+GLOBAL ? ? COMPONENTS "UNIFAC-GROUP" ? ? SOLVE ? \ "RUN-MODE" MODE = SIM \ ? 
+"DYN-OPTIONS" ? ? FLOWSHEET GLOBAL ? ? PROPERTIES MAIN ? \ GPROPERTIES 
+GBASEOPSET = "UNIQ-RK" GOPSETNAME = "UNIQ-RK" PARCON = -2 \ ? PROPERTIES 
+"OPTION-SETS" "UNIQ-RK" ? \ PARAM BASE = "UNIQ-RK" \ ? PROPERTIES "NC-PROPS" 
+? ? PROPERTIES "MOLEC-STRUCT" AMMONIA ? ? PROPERTIES "MOLEC-STRUCT" WATER ? ? 
+PROPERTIES PARAMETERS SUMMARY ? ? PROPERTIES PARAMETERS BINARY SCALAR 
+"MLQKIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = MLQKIJ SETNO = 1 \ ? 
+PROPERTIES PARAMETERS BINARY SCALAR "RKTKIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST 
+PARAMNAME = RKTKIJ SETNO = 1 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" 
+"ANDKIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = ANDKIJ SETNO = 1 UNITROW
+ = 0 TUNITROW = 22 TUNITLABEL = F NEL = 2 \ ? PROPERTIES PARAMETERS BINARY 
+"T-DEPENDENT" "ANDMIJ-1" ? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = ANDMIJ 
+SETNO = 1 UNITROW = 0 TUNITROW = 22 TUNITLABEL = F NEL = 2 \ ? PROPERTIES 
+PARAMETERS BINARY "T-DEPENDENT" "HENRY-1" ? ; "SI_MOLE" ; \ PROP-LIST 
+PARAMNAME = HENRY SETNO = 1 UNITROW = 20 UNITLABEL = "N/sqm" TUNITROW = 22 
+TUNITLABEL = K BDBANK = ( "APV120 ENRTL-RK" "APV120 BINARY" "APV120 HENRY-AP" 
+) NEL = 7 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" "MUKIJ-1" ? ; 
+"ENG_MOLE" ; \ PROP-LIST PARAMNAME = MUKIJ SETNO = 1 UNITROW = 0 TUNITROW = 22 
+TUNITLABEL = F NEL = 6 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" "MULIJ-1" 
+? ; "ENG_MOLE" ; \ PROP-LIST PARAMNAME = MULIJ SETNO = 1 UNITROW = 0 TUNITROW
+ = 22 TUNITLABEL = F NEL = 11 \ ? PROPERTIES PARAMETERS BINARY "T-DEPENDENT" 
+"UNIQ-1" ? ; "SI_MOLE" ; \ PROP-LIST PARAMNAME = UNIQ SETNO = 1 UNITROW = 0 
+TUNITROW = 22 TUNITLABEL = K BDBANK = ( "APV120 VLE-RK" "APV120 LLE-LIT" 
+"APV120 LLE-ASPEN" ) NEL = 12 \ \ BPVAL PARAMNAME2 = UNIQ CID1 = AMMONIA CID2
+ = WATER UNITROW2 = 0 TUNITROW2 = 22 TUNITLABEL2 = K VAL1 = "APV120 VLE-RK" 
+VAL2 = "APV120 VLE-RK" VAL3 = "APV120 VLE-RK" VAL4 = "APV120 VLE-RK" VAL5 = 
+"APV120 VLE-RK" VAL6 = "APV120 VLE-RK" VAL7 = "APV120 VLE-RK" VAL8 = 
+"APV120 VLE-RK" VAL9 = "APV120 VLE-RK" VAL10 = "APV120 VLE-RK" VAL11 = 
+"APV120 VLE-RK" VAL12 = "APV120 VLE-RK" \ ? PROPERTIES "ATTR-COMPS" ? ? 
+POLYMERS ? ? "STREAM-NAMES" ? ? "STREAM-GROUP" All ? \ DESCRIPTION 
+DESCRIPTION = "All streams" \ ? "STREAM-GROUP" Boundary ? \ DESCRIPTION 
+DESCRIPTION = "Boundary streams" \ ? "STREAM-GROUP" Charge ? \ DESCRIPTION 
+DESCRIPTION = "Charge streams" \ ? "STREAM-GROUP" Feeds ? \ DESCRIPTION 
+DESCRIPTION = "Feed streams" \ ? "STREAM-GROUP" Initial ? \ DESCRIPTION 
+DESCRIPTION = "Streams with user-specified values entered" \ ? "STREAM-GROUP" 
+Products ? \ DESCRIPTION DESCRIPTION = "Product streams" \ ? "STREAM-GROUP" 
+Tears ? \ DESCRIPTION DESCRIPTION = 
+"Tear streams manipulated by the convergence algorithms" \ ? "EO-VARS" ? ? 
+"EO-CONV-OPTI" ? \ DMO-PARAMS MODE = DEFAULT \ \ DMO-PARAMS MODE = SIMULATION 
+\ \ DMO-PARAMS MODE = "PARAMETER-ESTIMATION" \ \ DMO-PARAMS MODE = 
+RECONCILIATION \ \ DMO-PARAMS MODE = OPTIMIZATION \ \ LSSQP-PARAMS MODE-L = 
+DEFAULT \ \ LSSQP-PARAMS MODE-L = SIMULATION \ \ LSSQP-PARAMS MODE-L = 
+"PARAMETER-ESTIMATION" \ \ LSSQP-PARAMS MODE-L = RECONCILIATION \ \ 
+LSSQP-PARAMS MODE-L = OPTIMIZATION \ \ NSOLVE-PARAM NSOLVE-MODE = DEFAULT \ 
+\ NSOLVE-PARAM NSOLVE-MODE = SIMULATION \ \ NSOLVE-PARAM NSOLVE-MODE = 
+"PARAMETER-ESTIMATION" \ \ XSLP-PARAMS XSLP-MODE = DEFAULT \ \ XSLP-PARAMS 
+XSLP-MODE = SIMULATION \ \ XSLP-PARAMS XSLP-MODE = "PARAMETER-ESTIMATION" \ 
+\ XSLP-PARAMS XSLP-MODE = RECONCILIATION \ \ XSLP-PARAMS XSLP-MODE = 
+OPTIMIZATION \ ? REPORT "STREAM-REPOR" ? \ OPTIONS MOLEFLOW = MOLEFLOW \ ? 
+"PROP-TABLE" BINARY "BINRY-1" ? ; "SI_MOLE" ; \ PROPERTIES OPSETNAME = 
+"UNIQ-RK" FRWATEROPSET = "STEAM-TA" SOLU-WATER = 3 TRUE-COMPS = YES \ \ 
+"MASS-FLOW" COMP1 = AMMONIA COMP2 = WATER \ \ STATE VFRAC = 0.0 <0> <0> PRES
+ = 1.01325000E+5 <20> <1> GUNITLABEL = "J/kmol" \ \ ANALTYP ANALTYPE = TXY 
+\ \ TVARY TVARNAME = TEMP TUNITLABEL = K TVARVALUE = LIST TLIST = ( 
+298.1500000 <0> <0> ) \ \ PVARY PVARNAME = PRES PUNITLABEL = "N/sqm" 
+PVARVALUE = LIST PLIST = ( 1.01325000E+5 <0> <0> ) \ \ CVARY CVARNAME = 
+MOLEFRAC CCOMP = AMMONIA VARVALUE = RANGE CLOWER = 0.0 <0> <0> CUPPER = 1.0 
+<0> <0> CINCR = 0.020000 <0> <0> CNPOINT = 50 \ \ PARAM NPHASE = 3 TAGID = 
+"BINRY-1" \ \ PROPTY LOCALPROP = "UNIQ-RK" \ \ P2 PCOMPS1 = AMMONIA PCOMPS2
+ = WATER \ 
+
+ GRAPHICS_BACKUP
+PFS V 5.00
+$CONFIG
+paramdata APV120 ENRTL-RK
+paramdata APV120 VLE-IG
+paramdata APV120 VLE-RK
+paramdata APV120 VLE-HOC
+paramdata APV120 LLE-LIT
+paramdata APV120 LLE-ASPEN
+paramdata APV120 VLE-LIT
+paramdata APV120 BINARY
+paramdata APV120 PITZER
+paramdata APV120 EOS-LIT
+paramdata APV120 HENRY-AP
+paramdata APV120 SRK-ASPEN
+paramdata APV120 PC-SAFT
+paramdata APV120 POLYPCSF
+paramdata APV120 HYSYS
+paramdata APESV120 AP-EOS
+paramdata NISTV120 NIST-HOC
+paramdata NISTV120 NIST-IG
+paramdata NISTV120 NIST-RK
+paramdata NISTV120 NIST-EOS
+purebank APV120 PURE38
+purebank APV120 AQUEOUS
+purebank APV120 SOLIDS
+purebank APV120 INORGANIC
+purebank APESV120 AP-EOS
+purebank NISTV120 NIST-TRC
+regdbank 0
+ftn_check 1
+autoblockid 1
+autostreamid 1
+showblockid 1
+showstreamid 1
+autoplacement 1
+grid 2
+gridresolution 0.100000
+scale 0
+blockprefix B
+labelscale 1.000000
+3DOn 1
+qwformat %.0f
+tempformat %.0f
+presformat %.0f
+flowformat %.0f
+strmqwformat %.0f
+vflowformat %.0f
+mflowformat %.0f
+vfracformat %.2f
+pseudobatch 0
+partial 1
+animation 1
+runanyway 0
+globalqw 0
+globaltemp 0
+globalpres 0
+globalflow 0
+globalstrmqw 0
+globalvflow 0
+globalmflow 0
+globalvfrac 0
+globalshowcalcerror 1
+globalshowcalcwarning 1
+globalshowdisabled 1
+tooldrawvisible 0
+browserheight 7530
+browserwidth 10725
+browsertreewidth 2450
+polyplusenabled 1
+dynaplusenabled 1
+bfracenabled 1
+rtfenabled 1
+rspenabled 1
+initializeicarus 0
+pinchenabled 0
+linklimit 5000
+material_color 0
+material_style 0
+material_width 1
+heat_color 0
+heat_style 1
+heat_width 1
+heat_termid Q
+work_color 0
+work_style 2
+work_width 1
+work_termid W
+connections_color 9
+connections_style 3
+connections_width 1
+measurements_color 4
+measurements_style 4
+measurements_width 1
+displayeoconn 0
+displaycalcs 0
+displaytransfers 0
+displaymeas 0
+displaydesignspecs 0
+displaycalccons 0
+displaymeascons 0
+displayothercons 0
+displayeomeas 1
+displayeomeastype 2
+displayothermanipconn 0
+showeoviews 0
+eoautosave 1
+allow_system_userprops 0
+copy_estimation 1
+copy_retrieved 1
+purge_incomp_params 0
+set_default_biparams 0
+set_default_dataset1 0
+set_default_dataset0 1
+bestinput 0
+autosmrun 0
+genallpropset 0
+strmresformdefault 0
+roottype 1
+exchangerfile 1
+streamformat 1
+runsettingfile 1
+usermodelfile 1
+fortranfile 0
+timeout 1000
+auto_evaluate 0
+customglobaldatapropset1 0 | Custom1 | * | %.2f | 0 | 6
+customglobaldatapropset2 0 | Custom2 | * | %.2f | 1 | 7
+customglobaldatapropset3 0 | Custom3 | * | %.2f | 2 | 8
+customglobaldatapropset4 0 | Custom4 | * | %.2f | 4 | 9
+customglobaldatapropset5 0 | Custom5 | * | %.2f | 5 | 10
+customglobaldatapropset6 0 | Custom6 | * | %.2f | 6 | 11
+economics_active 0
+ignoreEOVarNameFixupsOnImport 1
+tpsaupgrade 1
+sumcount 1
+#
+$_APWNSHELL_SETTINGS
+<FileRootSettings><CaseFileSettings>&lt;CaseFileSettings StreamSummaryFormSettings="&amp;lt;src&amp;gt;&amp;lt;ReferencedPaths&amp;gt;&amp;lt;Path&amp;gt;Top.appModelV8.Results Summary&amp;lt;/Path&amp;gt;&amp;lt;/ReferencedPaths&amp;gt;&amp;lt;ReferencedTemplates /&amp;gt;&amp;lt;/src&amp;gt;" xmlns="clr-namespace:AspenTech.AspenPlus.Infrastructure;assembly=AspenTech.AspenPlus.Infrastructure" /&gt;</CaseFileSettings><CommonShellSettings>&lt;CommonShellSettings xmlns="http://schemas.aspentech.com/xaml/presentation/visualisation/commonshell" xmlns:atapi="clr-namespace:AspenTech.AspenPlus.Infrastructure;assembly=AspenTech.AspenPlus.Infrastructure" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:atapmaa="clr-namespace:AspenTech.AspenPlus.Modules.ApwnApplication;assembly=ApwnShell" xmlns:sc="clr-namespace:System.Collections;assembly=mscorlib" xmlns:atapie="clr-namespace:AspenTech.AspenPlus.Infrastructure.Events;assembly=AspenTech.AspenPlus.Infrastructure" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:apmab="clr-namespace:AspenPlus.Modules.ApwnBrowser;assembly=ApwnShell" xmlns:cxv="http://schemas.aspentech.com/xaml/presentation/cxsviewmodel" xmlns:apmas="clr-namespace:AspenPlus.Modules.ApwnSimulation;assembly=ApwnShell"&gt;&lt;CommonShellSettings.CurrentWorkspace&gt;&lt;ShellWorkspace ActivationBarState="&amp;lt;DashboardPanel IsExpanded=&amp;quot;false&amp;quot; IsTurnedOff=&amp;quot;false&amp;quot; Version=&amp;quot;38&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EconomicAnalysis.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;!--This is the current state of Economics Analysis Dashboard--&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;Root&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;OnOffState Value=&amp;quot;Off&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;CapitalCost Value=&amp;quot;&amp;quot; Units=&amp;quot;USD&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;UtilityCost Value=&amp;quot;&amp;quot; Units=&amp;quot;USD/Year&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;HasError&amp;amp;gt;false&amp;amp;lt;/HasError&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;_statusCode Value=&amp;quot;-1&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Flags&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isRunCompleted Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isRunning Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButActivated Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButLoaded Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButSized Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_incompleteButMapped Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_completeEvaluatedNotAutoRun Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isSimulationChanged Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isInStopping Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isOnOffButtonCanBeUsed Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;    &amp;amp;lt;_isResetDashboardButLeaveItOn Value=&amp;quot;false&amp;quot; /&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;/Flags&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/Root&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EnergyAnalysis.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;!--This is the current state of Energy Analysis Dashboard--&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;Root&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsExpanded&amp;amp;gt;false&amp;amp;lt;/IsExpanded&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;OnOff&amp;amp;gt;Off&amp;amp;lt;/OnOff&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Status&amp;amp;gt;InputIncomplete&amp;amp;lt;/Status&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;PUS&amp;amp;gt;&amp;amp;lt;/PUS&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Percent&amp;amp;gt;&amp;amp;lt;/Percent&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;Units&amp;amp;gt;MW&amp;amp;lt;/Units&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/Root&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;Item Type=&amp;quot;AspenTech.ActivationDashboard.EdrActivation.DashboardItem&amp;quot;&amp;gt;&amp;amp;lt;EDR&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowModelStatus&amp;amp;gt;false&amp;amp;lt;/IsShowModelStatus&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowRiskStatus&amp;amp;gt;false&amp;amp;lt;/IsShowRiskStatus&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;IsShowLegend&amp;amp;gt;false&amp;amp;lt;/IsShowLegend&amp;amp;gt;&amp;#xD;&amp;#xA;  &amp;amp;lt;DetailCount&amp;amp;gt;0&amp;amp;lt;/DetailCount&amp;amp;gt;&amp;#xD;&amp;#xA;&amp;amp;lt;/EDR&amp;amp;gt;&amp;lt;/Item&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/DashboardPanel&amp;gt;" Layout="&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;xamDockManager version=&amp;quot;19.2.20192.90&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;contentPanes&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;FlowsheetScreenFactory&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-03-21T09:59:19.9258362Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;ModelLibraryScreenFactoryKey&amp;quot; location=&amp;quot;DockedBottom&amp;quot; lastActivatedTime=&amp;quot;2025-03-21T05:02:49.6096423Z&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/contentPanes&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;panes&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;splitPane name=&amp;quot;Zb34b3e38c04c43b294c6965b23ba62bb&amp;quot; splitterOrientation=&amp;quot;Vertical&amp;quot; location=&amp;quot;DockedBottom&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;contentPane name=&amp;quot;ModelLibraryScreenFactoryKey&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/panes&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;documents splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;splitPane name=&amp;quot;Zfaa7d9c750fe4048bb10da9007396f50&amp;quot; splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;tabGroup name=&amp;quot;Za80a96d1524a4e218e3bb48b7a50bc07&amp;quot; selectedIndex=&amp;quot;0&amp;quot;&amp;gt;&amp;#xD;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;FlowsheetScreenFactory&amp;quot; /&amp;gt;&amp;#xD;&amp;#xA;      &amp;lt;/tabGroup&amp;gt;&amp;#xD;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xD;&amp;#xA;  &amp;lt;/documents&amp;gt;&amp;#xD;&amp;#xA;&amp;lt;/xamDockManager&amp;gt;" NavigationGroupToSelect="Simulation" IsNavigationPaneMinimized="False" IsRibbonMinimized="False"&gt;&lt;ShellWorkspace.Screens&gt;&lt;WorkspaceScreenData PaneName="FlowsheetScreenFactory" ScreenFactoryKey="FlowsheetScreenFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapi:StringScreenSubject subject="{assembly:Null}" fatherNodePath="{assembly:Null}" NavigationGroupKey="Simulation" /&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState Zoom="9.890001" /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="ModelLibraryScreenFactoryKey" ScreenFactoryKey="ModelLibraryScreenFactoryKey"&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;/ShellWorkspace.Screens&gt;&lt;/ShellWorkspace&gt;&lt;/CommonShellSettings.CurrentWorkspace&gt;&lt;CommonShellSettings.SavedWorkspaces&gt;&lt;ShellWorkspaceFolder /&gt;&lt;/CommonShellSettings.SavedWorkspaces&gt;&lt;CommonShellSettings.NavigatorGroupWorkspaces&gt;&lt;ShellWorkspace Name="Properties" Layout="&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;&amp;#xA;&amp;lt;xamDockManager version=&amp;quot;19.2.20192.90&amp;quot;&amp;gt;&amp;#xA;  &amp;lt;contentPanes&amp;gt;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;Pane_ApwnPfsPlotWizardScreen_1&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-03-21T05:02:46.2140543Z&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;_AnonymousScreen2&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-03-21T05:01:51.6455304Z&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;ControlPanelScreenFactory&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-03-21T05:01:38.4326475Z&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;_AnonymousScreen1&amp;quot; location=&amp;quot;Document&amp;quot; lastActivatedTime=&amp;quot;2025-03-21T05:01:36.7423275Z&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;contentPane name=&amp;quot;ModelLibraryScreenFactoryKey&amp;quot; location=&amp;quot;DockedBottom&amp;quot; lastActivatedTime=&amp;quot;2025-03-21T04:54:39.0911443Z&amp;quot; visibility=&amp;quot;Collapsed&amp;quot; /&amp;gt;&amp;#xA;  &amp;lt;/contentPanes&amp;gt;&amp;#xA;  &amp;lt;panes&amp;gt;&amp;#xA;    &amp;lt;splitPane splitterOrientation=&amp;quot;Vertical&amp;quot; location=&amp;quot;DockedBottom&amp;quot;&amp;gt;&amp;#xA;      &amp;lt;contentPane name=&amp;quot;ModelLibraryScreenFactoryKey&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xA;  &amp;lt;/panes&amp;gt;&amp;#xA;  &amp;lt;documents splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xA;    &amp;lt;splitPane splitterOrientation=&amp;quot;Vertical&amp;quot;&amp;gt;&amp;#xA;      &amp;lt;tabGroup selectedIndex=&amp;quot;3&amp;quot;&amp;gt;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;_AnonymousScreen1&amp;quot; /&amp;gt;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;ControlPanelScreenFactory&amp;quot; /&amp;gt;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;_AnonymousScreen2&amp;quot; /&amp;gt;&amp;#xA;        &amp;lt;contentPane name=&amp;quot;Pane_ApwnPfsPlotWizardScreen_1&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;/tabGroup&amp;gt;&amp;#xA;    &amp;lt;/splitPane&amp;gt;&amp;#xA;  &amp;lt;/documents&amp;gt;&amp;#xA;&amp;lt;/xamDockManager&amp;gt;" NavigationGroupToSelect="Properties" IsNavigationPaneMinimized="False" IsRibbonMinimized="False"&gt;&lt;ShellWorkspace.Screens&gt;&lt;WorkspaceScreenData PaneName="Pane_ApwnPfsPlotWizardScreen_1" ScreenFactoryKey="ApwnPlotWizardScreenFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapmaa:ApwnPfsPlotWizardScreenSubject Title="BINRY-1 (Binary) - T-xy - Plot" PlotID="T-xy" TagID="BINRY-1$" RibbonPlotMgrID="WpfPLANALYSIS.RibbonPlotWizardMgr" PlotWizardPath="Top.appModelV8.Properties.Analysis.BINRY-1" PersistXML="&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-16&amp;quot;?&amp;gt;&amp;#xA;&amp;lt;Plot&amp;gt;&amp;#xA;  &amp;lt;PlotSettings Value=&amp;quot;Type:0&amp;amp;#xA;Title:T-xy diagram for AMMONIA/WATER&amp;amp;#xA;ShowTitle:1&amp;amp;#xA;Xlab:Liquid/vapor mole fraction, AMMONIA&amp;amp;#xA;Ylab:Temperature, K&amp;amp;#xA;Nvars:2&amp;amp;#xA;MultiY:1&amp;amp;#xA;Subst:&amp;amp;#xA;NYaxes:1&amp;amp;#xA;RunPlot:0&amp;amp;#xA;PhasePlot:0&amp;amp;#xA;SizeToData:0&amp;amp;#xA;CommunicationIntervals:1&amp;amp;#xA;UseVar:0&amp;amp;#xA;IgnoreLegend:0&amp;amp;#xA;TimeWin:1&amp;amp;#xA;TimeScroll:0.2&amp;amp;#xA;AlwaysShow:0&amp;amp;#xA;PhaseX:&amp;amp;#xA;XLabel:Liquid/vapor mole fraction, AMMONIA&amp;amp;#xA;XLabelColor:0&amp;amp;#xA;XAxisColor:0&amp;amp;#xA;Var:1&amp;amp;#xA;AxisMap:1&amp;amp;#xA;Label:Temperature, K&amp;amp;#xA;LabelColor:0&amp;amp;#xA;AxisColor:0&amp;amp;#xA;Legend:x  1.0133E+5 N/sqm&amp;amp;#xA;SubstValue:&amp;amp;#xA;Hidden:0&amp;amp;#xA;Var:2&amp;amp;#xA;AxisMap:1&amp;amp;#xA;Label:Temperature, K&amp;amp;#xA;LabelColor:0&amp;amp;#xA;AxisColor:0&amp;amp;#xA;Legend:y  1.0133E+5 N/sqm&amp;amp;#xA;SubstValue:&amp;amp;#xA;Hidden:0&amp;amp;#xA;Axis:0&amp;amp;#xA;Range:0 1&amp;amp;#xA;AxisInterval:0.05 0&amp;amp;#xA;AxisRange:0 1&amp;amp;#xA;AxisResetRange:1&amp;amp;#xA;AxisScale:0 0&amp;amp;#xA;Multiplier:0&amp;amp;#xA;MultiplierType:0&amp;amp;#xA;AxisFlag:0&amp;amp;#xA;Axis:1&amp;amp;#xA;Range:239.748 373.168&amp;amp;#xA;AxisInterval:5 0&amp;amp;#xA;AxisRange:235 375&amp;amp;#xA;AxisResetRange:1&amp;amp;#xA;AxisScale:0 0&amp;amp;#xA;Multiplier:0&amp;amp;#xA;MultiplierType:0&amp;amp;#xA;AxisFlag:0&amp;amp;#xA;Attrib:0 3 0 1 1&amp;amp;#xA;Attrib2:0 0 0 0 0&amp;amp;#xA;Attrib:1 3 0 2 2&amp;amp;#xA;Attrib2:1 0 0 0 0&amp;amp;#xA;Font:0 9 2:Segoe UI&amp;amp;#xA;Font:1 8 0:Segoe UI&amp;amp;#xA;Font:2 8 0:Segoe UI&amp;amp;#xA;Font:3 8 0:Segoe UI&amp;amp;#xA;Grid:3&amp;amp;#xA;Line:2&amp;amp;#xA;Square:0 0 0 0&amp;amp;#xA;Marker:4 1&amp;amp;#xA;LegendBox:1 1.000000 0.030000&amp;amp;#xA;LegendBox2:20 1.250000 6&amp;amp;#xA;&amp;quot; /&amp;gt;&amp;#xA;  &amp;lt;PlwConfigSettings Value=&amp;quot;&amp;quot; /&amp;gt;&amp;#xA;  &amp;lt;DataFields&amp;gt;&amp;#xA;    &amp;lt;Field Name=&amp;quot;Component&amp;quot; Value=&amp;quot;AMMONIA&amp;quot; Options=&amp;quot;AMMONIA,WATER&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;Field Name=&amp;quot;Temperature&amp;quot; Value=&amp;quot;K&amp;quot; Options=&amp;quot;K,F,C,R&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;Field Name=&amp;quot;Pressure&amp;quot; Value=&amp;quot;N/sqm&amp;quot; Options=&amp;quot;N/sqm,psia,atm,lbf/sqft,bar,torr,in-water,kg/sqcm,mmHg,kPa,mm-water,mbar,psig,atmg,barg,kg/sqcmg,lb/ft-sqsec,kg/m-sqsec,Pa,MPa,Pag,kPag,MPag,mbarg,in-Hg,mmHg-vac,in-Hg-vac,in-water-60F,in-water-vac,in-water-60F-vac,in-water-g,in-water-60F-g,mm-water-g,mm-water-60F-g,psi,mm-water-60F,bara&amp;quot; /&amp;gt;&amp;#xA;  &amp;lt;/DataFields&amp;gt;&amp;#xA;  &amp;lt;PlotData&amp;gt;&amp;#xA;    &amp;lt;NumofPoints npoint=&amp;quot;51&amp;quot; nxvar=&amp;quot;3&amp;quot; nvar=&amp;quot;2&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;Points&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0 0 1E+28&amp;quot; YData=&amp;quot;373.1678 373.1678&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.02 0.1848346 1E+28&amp;quot; YData=&amp;quot;368.0793 368.0793&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.04 0.3492175 1E+28&amp;quot; YData=&amp;quot;362.6764 362.6764&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.06 0.4902414 1E+28&amp;quot; YData=&amp;quot;357.0519 357.0519&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.08 0.6074686 1E+28&amp;quot; YData=&amp;quot;351.2929 351.2929&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.1 0.7022463 1E+28&amp;quot; YData=&amp;quot;345.4799 345.4799&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.12 0.7770319 1E+28&amp;quot; YData=&amp;quot;339.6844 339.6844&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.14 0.8348119 1E+28&amp;quot; YData=&amp;quot;333.9684 333.9684&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.16 0.8786599 1E+28&amp;quot; YData=&amp;quot;328.3833 328.3833&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.18 0.9114427 1E+28&amp;quot; YData=&amp;quot;322.9695 322.9695&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.2 0.9356588 1E+28&amp;quot; YData=&amp;quot;317.7575 317.7575&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.22 0.9533795 1E+28&amp;quot; YData=&amp;quot;312.768 312.768&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.24 0.966257 1E+28&amp;quot; YData=&amp;quot;308.0142 308.0142&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.26 0.9755699 1E+28&amp;quot; YData=&amp;quot;303.5021 303.5021&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.28 0.9822857 1E+28&amp;quot; YData=&amp;quot;299.2327 299.2327&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.3 0.9871225 1E+28&amp;quot; YData=&amp;quot;295.2029 295.2029&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.32 0.9906069 1E+28&amp;quot; YData=&amp;quot;291.4065 291.4065&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.34 0.9931204 1E+28&amp;quot; YData=&amp;quot;287.8354 287.8354&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.36 0.9949381 1E+28&amp;quot; YData=&amp;quot;284.4797 284.4797&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.38 0.9962569 1E+28&amp;quot; YData=&amp;quot;281.329 281.329&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.4 0.9972174 1E+28&amp;quot; YData=&amp;quot;278.3722 278.3722&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.42 0.9979202 1E+28&amp;quot; YData=&amp;quot;275.5983 275.5983&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.44 0.9984369 1E+28&amp;quot; YData=&amp;quot;272.9962 272.9962&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.46 0.9988185 1E+28&amp;quot; YData=&amp;quot;270.5552 270.5552&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.48 0.9991017 1E+28&amp;quot; YData=&amp;quot;268.2651 268.2651&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.5 0.9993132 1E+28&amp;quot; YData=&amp;quot;266.1161 266.1161&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.52 0.9994722 1E+28&amp;quot; YData=&amp;quot;264.0988 264.0988&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.54 0.9995922 1E+28&amp;quot; YData=&amp;quot;262.2045 262.2045&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.56 0.9996835 1E+28&amp;quot; YData=&amp;quot;260.4252 260.4252&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.58 0.9997533 1E+28&amp;quot; YData=&amp;quot;258.7533 258.7533&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.6 0.999807 1E+28&amp;quot; YData=&amp;quot;257.1817 257.1817&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.62 0.9998485 1E+28&amp;quot; YData=&amp;quot;255.7038 255.7038&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.64 0.9998807 1E+28&amp;quot; YData=&amp;quot;254.3138 254.3138&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.66 0.9999058 1E+28&amp;quot; YData=&amp;quot;253.006 253.006&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.68 0.9999255 1E+28&amp;quot; YData=&amp;quot;251.7753 251.7753&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.7 0.999941 1E+28&amp;quot; YData=&amp;quot;250.6172 250.6172&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.72 0.9999533 1E+28&amp;quot; YData=&amp;quot;249.5273 249.5273&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.74 0.999963 1E+28&amp;quot; YData=&amp;quot;248.5016 248.5016&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.76 0.9999708 1E+28&amp;quot; YData=&amp;quot;247.5367 247.5367&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.78 0.999977 1E+28&amp;quot; YData=&amp;quot;246.6292 246.6292&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.8 0.9999819 1E+28&amp;quot; YData=&amp;quot;245.776 245.776&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.82 0.9999859 1E+28&amp;quot; YData=&amp;quot;244.9746 244.9746&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.84 0.9999891 1E+28&amp;quot; YData=&amp;quot;244.2224 244.2224&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.86 0.9999917 1E+28&amp;quot; YData=&amp;quot;243.5172 243.5172&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.88 0.9999937 1E+28&amp;quot; YData=&amp;quot;242.8569 242.8569&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.9 0.9999954 1E+28&amp;quot; YData=&amp;quot;242.2397 242.2397&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.92 0.9999968 1E+28&amp;quot; YData=&amp;quot;241.664 241.664&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.94 0.9999978 1E+28&amp;quot; YData=&amp;quot;241.1281 241.1281&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.96 0.9999987 1E+28&amp;quot; YData=&amp;quot;240.6309 240.6309&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;0.98 0.9999994 1E+28&amp;quot; YData=&amp;quot;240.1711 240.1711&amp;quot; /&amp;gt;&amp;#xA;      &amp;lt;Point XData=&amp;quot;1 1 1E+28&amp;quot; YData=&amp;quot;239.7476 239.7476&amp;quot; /&amp;gt;&amp;#xA;    &amp;lt;/Points&amp;gt;&amp;#xA;    &amp;lt;XVariables Value=&amp;quot;1 2&amp;quot; /&amp;gt;&amp;#xA;  &amp;lt;/PlotData&amp;gt;&amp;#xA;&amp;lt;/Plot&amp;gt;" LivePlot="True" Orphan="False" UserModified="False" LivePlotSupport="True"&gt;&lt;atapmaa:ApwnPfsPlotWizardScreenSubject.PlotData&gt;&lt;assembly:Null /&gt;&lt;/atapmaa:ApwnPfsPlotWizardScreenSubject.PlotData&gt;&lt;atapmaa:ApwnPfsPlotWizardScreenSubject.AdditionalPlots&gt;&lt;sc:ArrayList Capacity="0" /&gt;&lt;/atapmaa:ApwnPfsPlotWizardScreenSubject.AdditionalPlots&gt;&lt;/atapmaa:ApwnPfsPlotWizardScreenSubject&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="_AnonymousScreen2" ScreenFactoryKey="ApwnFormContentFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapmaa:ApwnFormScreenSubject Key="Analysis.BINRY-1.Input" NavigationGroupKey="Properties"&gt;&lt;atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapie:ShowFormEventArgs FormProgId="MMANALYSIS_BI.MMANALYSIS_BI_INP" FormKey="Analysis.BINRY-1.Input" Header="BINRY-1 (BINARY) - Input" ResultsOnly="False" PathKey="Top.appModelV8.Properties.Analysis.BINRY-1"&gt;&lt;atapie:ShowFormEventArgs.Parameters&gt;&lt;s:String assembly:Key="id"&gt;BINRY-1&lt;/s:String&gt;&lt;s:String assembly:Key="main"&gt;Top.appModelV8.Properties.Analysis.BINRY-1&lt;/s:String&gt;&lt;/atapie:ShowFormEventArgs.Parameters&gt;&lt;/atapie:ShowFormEventArgs&gt;&lt;/atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Properties.Analysis.BINRY-1"&gt;&lt;apmab:ApwnPlotwizardRule.ProgId&gt;&lt;s:String&gt;WpfPLANALYSIS.RibbonPlotWizardMgr&lt;/s:String&gt;&lt;/apmab:ApwnPlotwizardRule.ProgId&gt;&lt;/apmab:ApwnPlotwizardRule&gt;&lt;/atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;/atapmaa:ApwnFormScreenSubject&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;atapmaa:ApwnFormScreenState&gt;&lt;atapmaa:ApwnFormScreenState.Parameters&gt;&lt;cxv:CxvParameter Name="main" Value="Top.appModelV8.Properties.Analysis.BINRY-1" /&gt;&lt;cxv:CxvParameter Name="id" Value="BINRY-1" /&gt;&lt;cxv:CxvParameter Name="extraComments_path" Value="Comments" /&gt;&lt;cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" /&gt;&lt;cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" /&gt;&lt;cxv:CxvParameter Name="selected_tab" Value="tab0" /&gt;&lt;/atapmaa:ApwnFormScreenState.Parameters&gt;&lt;/atapmaa:ApwnFormScreenState&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="ControlPanelScreenFactory" ScreenFactoryKey="ControlPanelScreenFactory"&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;apmas:ControlPanelScreenState IsConvergencePaneExpanded="False" SelectedWatchItem="Overall Max-Error/Tol" /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="_AnonymousScreen1" ScreenFactoryKey="ApwnFormContentFactory"&gt;&lt;WorkspaceScreenData.ScreenSubject&gt;&lt;atapmaa:ApwnFormScreenSubject Key="Properties.Parameters.Binary Interaction.UNIQ-1" NavigationGroupKey="Properties"&gt;&lt;atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapie:ShowFormEventArgs FormProgId="MMPARAM_BI_COR.MMPARAM_BI_COR_INP" FormKey="Properties.Parameters.Binary Interaction.UNIQ-1" Header="Binary Interaction - UNIQ-1 (T-DEPENDENT)" ResultsOnly="False" PathKey="Top.appModelV8.Properties.Parameters.Binary Interaction.UNIQ-1"&gt;&lt;atapie:ShowFormEventArgs.Parameters&gt;&lt;s:String assembly:Key="id"&gt;UNIQ-1&lt;/s:String&gt;&lt;s:String assembly:Key="main"&gt;Top.appModelV8.Properties.Parameters.Binary Interaction.UNIQ-1&lt;/s:String&gt;&lt;/atapie:ShowFormEventArgs.Parameters&gt;&lt;/atapie:ShowFormEventArgs&gt;&lt;/atapmaa:ApwnFormScreenSubject.ShowFormArgs&gt;&lt;atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;apmab:ApwnPlotwizardRule ContextPath="Top.appModelV8.Properties.Parameters.Binary Interaction.UNIQ-1" /&gt;&lt;/atapmaa:ApwnFormScreenSubject.PlotwizardRule&gt;&lt;/atapmaa:ApwnFormScreenSubject&gt;&lt;/WorkspaceScreenData.ScreenSubject&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;atapmaa:ApwnFormScreenState&gt;&lt;atapmaa:ApwnFormScreenState.Parameters&gt;&lt;cxv:CxvParameter Name="main" Value="Top.appModelV8.Properties.Parameters.Binary Interaction.UNIQ-1" /&gt;&lt;cxv:CxvParameter Name="id" Value="UNIQ-1" /&gt;&lt;cxv:CxvParameter Name="extraComments_path" Value="Comments" /&gt;&lt;cxv:CxvParameter Name="extraDescription_path" Value="Input.DESCRIPTION" /&gt;&lt;cxv:CxvParameter Name="extraUnits_path" Value="Input.Unit Set" /&gt;&lt;cxv:CxvParameter Name="choice" Value="UNIQ" /&gt;&lt;cxv:CxvParameter Name="z"&gt;&lt;cxv:CxvParameter.Value&gt;&lt;s:Int32&gt;0&lt;/s:Int32&gt;&lt;/cxv:CxvParameter.Value&gt;&lt;/cxv:CxvParameter&gt;&lt;cxv:CxvParameter Name="y" Value="1" /&gt;&lt;cxv:CxvParameter Name="CmdSearchEnable" Value="1" /&gt;&lt;cxv:CxvParameter Name="CmdReginfoVisible" Value="1" /&gt;&lt;cxv:CxvParameter Name="selected_tab" Value="tabNew" /&gt;&lt;/atapmaa:ApwnFormScreenState.Parameters&gt;&lt;/atapmaa:ApwnFormScreenState&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;WorkspaceScreenData PaneName="ModelLibraryScreenFactoryKey" ScreenFactoryKey="ClosedScreenPlaceholder"&gt;&lt;WorkspaceScreenData.ScreenState&gt;&lt;ScreenState /&gt;&lt;/WorkspaceScreenData.ScreenState&gt;&lt;/WorkspaceScreenData&gt;&lt;/ShellWorkspace.Screens&gt;&lt;/ShellWorkspace&gt;&lt;/CommonShellSettings.NavigatorGroupWorkspaces&gt;&lt;/CommonShellSettings&gt;</CommonShellSettings></FileRootSettings>
+$_END_APWNSHELL_SETTINGS
+#
+PFSVData
+# of PFS Objects = 3
+SIZE -22.4 9.6 -4.8 6
+LEGEND
+Version: 2
+Unfixed
+OLEOBJECT
+Version: 256
+Dim: -22.4 6 2.5 -4.8
+Item: 2 1
+Aspect: 1
+Embedding 2
+Tag
+Tag
+ENDOLE
+OLEOBJECT
+Version: 256
+Dim: 7.9 0.5 9.6 -0.2
+Item: 4 1
+Aspect: 1
+Embedding 4
+Tag
+Tag
+ENDOLE
+# of PFS Objects = 0
+VIEWPORT 7.660283 10.541083 0.592246 -0.174744
+LAYOUT
+TableFormat 1
+Pages 1 1 1 1
+PAGESETUP
+PAPERSIZE 
+PAPERSOURCE 
+ORIENTATION -1
+PRINTPAGENO 1 1
+LEFTMARGIN 10mm
+RIGHTMARGIN 10mm
+TOPMARGIN 10mm
+BOTTOMMARGIN 10mm
+VISIBILITY 0.030000
+PFDFLAG 255 255
+PFDMODE 0
+SCALE 0.001835
+
+$_SUMMARY_FILE
+ MMSUMMARY
+$_ADS_FILE
+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
+$_END_ADS_FILE

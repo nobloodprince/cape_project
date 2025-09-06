@@ -1,0 +1,219 @@
+
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION REPORT                      + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 21, 2025      
+ VERSION: 38.0   Build 380                               FRIDAY      
+ INSTALLATION:                                           3:39:08 P.M.        
+
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE    I
+                                  TUTORIAL1                                     
+
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+                               TABLE OF CONTENTS                                
+
+
+            RUN CONTROL SECTION....................................  1
+                 RUN CONTROL INFORMATION...........................  1
+
+            FLOWSHEET SECTION......................................  2
+                 FLOWSHEET CONNECTIVITY BY STREAMS.................  2
+                 FLOWSHEET CONNECTIVITY BY BLOCKS..................  2
+                 COMPUTATIONAL SEQUENCE............................  2
+                 OVERALL FLOWSHEET BALANCE.........................  2
+
+            PHYSICAL PROPERTIES SECTION............................  3
+                 COMPONENTS........................................  3
+
+            U-O-S BLOCK SECTION....................................  4
+                 BLOCK:  B1       MODEL: MIXER.....................  4
+
+            STREAM SECTION.........................................  5
+                 FEED MIBK1 PRODUCT1...............................  5
+
+            PROBLEM STATUS SECTION.................................  6
+                 BLOCK STATUS......................................  6
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 1       
+                                  TUTORIAL1                                     
+                              RUN CONTROL SECTION                               
+
+ RUN CONTROL INFORMATION                 
+ -----------------------
+
+ THIS COPY OF ASPEN PLUS LICENSED TO INDIAN INSTITUTE OF TECH        
+
+ TYPE OF RUN: NEW 
+
+ INPUT FILE NAME: _3256iyq.inm
+
+ OUTPUT PROBLEM DATA FILE NAME: _3256iyq 
+ LOCATED IN:                    
+
+
+ PDF SIZE USED FOR INPUT TRANSLATION:
+   NUMBER OF FILE RECORDS (PSIZE) =     0
+   NUMBER OF IN-CORE RECORDS      =   256
+ PSIZE NEEDED FOR SIMULATION    =   256
+
+ CALLING PROGRAM NAME:          apmain  
+ LOCATED IN: C:\Program Files\AspenTech\Aspen Plus V12.0\Engine\\xeq
+
+ SIMULATION REQUESTED FOR ENTIRE FLOWSHEET
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 2       
+                                  TUTORIAL1                                     
+                               FLOWSHEET SECTION                                
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+ ---------------------------------
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   MIBK1      ----       B1             FEED       ----       B1      
+   PRODUCT1   B1         ----                                         
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+ --------------------------------
+
+   BLOCK        INLETS                         OUTLETS
+   B1           FEED MIBK1                     PRODUCT1                    
+
+ COMPUTATIONAL SEQUENCE                  
+ ----------------------
+
+ SEQUENCE USED WAS:
+    B1                                                                     
+
+ OVERALL FLOWSHEET BALANCE               
+ -------------------------
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    CONVENTIONAL COMPONENTS (KMOL/HR )
+       WATER                     1.25891         1.25891         0.00000    
+       ACETONE                  0.390489        0.390489         0.00000    
+       MIBK                     0.452865        0.452865         0.00000    
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            2.10226         2.10226         0.00000    
+       MASS(KG/HR   )            90.7185         90.7185         0.00000    
+       ENTHALPY(CAL/SEC )       -40120.6        -40120.6         0.00000    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 3       
+                                  TUTORIAL1                                     
+                          PHYSICAL PROPERTIES SECTION                           
+
+ COMPONENTS                              
+ ----------
+
+  ID       TYPE  ALIAS          NAME
+   WATER    C     H2O            WATER                           
+   ACETONE  C     C3H6O-1        ACETONE                         
+   MIBK     C     C6H12O-2       METHYL-ISOBUTYL-KETONE          
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 4       
+                                  TUTORIAL1                                     
+                              U-O-S BLOCK SECTION                               
+
+ BLOCK:  B1       MODEL: MIXER           
+ -----------------------------
+   INLET STREAMS:         FEED        MIBK1   
+   OUTLET STREAM:         PRODUCT1
+   PROPERTY OPTION SET:   IDEAL     IDEAL LIQUID / IDEAL GAS                    
+
+                      ***  MASS AND ENERGY BALANCE  ***
+                                    IN              OUT        RELATIVE DIFF.
+    TOTAL BALANCE
+       MOLE(KMOL/HR )            2.10226         2.10226         0.00000    
+       MASS(KG/HR   )            90.7185         90.7185         0.00000    
+       ENTHALPY(CAL/SEC )       -40120.6        -40120.6         0.00000    
+
+                      ***  CO2 EQUIVALENT SUMMARY ***
+    FEED STREAMS CO2E             0.00000      KG/HR           
+    PRODUCT STREAMS CO2E          0.00000      KG/HR           
+    NET STREAMS CO2E PRODUCTION   0.00000      KG/HR           
+    UTILITIES CO2E PRODUCTION     0.00000      KG/HR           
+    TOTAL CO2E PRODUCTION         0.00000      KG/HR           
+
+                          ***  INPUT DATA  ***
+   ONE    PHASE      FLASH   SPECIFIED PHASE IS  LIQUID 
+   MAXIMUM NO. ITERATIONS                                   30
+   CONVERGENCE TOLERANCE                                     0.000100000
+   OUTLET PRESSURE:  MINIMUM OF INLET STREAM PRESSURES
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 5       
+                                  TUTORIAL1                                     
+                                 STREAM SECTION                                 
+
+ FEED MIBK1 PRODUCT1                             
+ -------------------
+
+ STREAM ID               FEED       MIBK1      PRODUCT1
+ FROM :                  ----       ----       B1      
+ TO   :                  B1         B1         ----    
+
+ SUBSTREAM: MIXED   
+ PHASE:                  LIQUID     LIQUID     LIQUID 
+ COMPONENTS: KMOL/HR         
+   WATER                  1.2589     0.0        1.2589
+   ACETONE                0.3905     0.0        0.3905
+   MIBK                   0.0        0.4529     0.4529
+ TOTAL FLOW:         
+   KMOL/HR                1.6494     0.4529     2.1023
+   KG/HR                 45.3592    45.3592    90.7185
+   L/MIN                  0.8618     0.9480     1.7725
+ STATE VARIABLES:    
+   TEMP   C              23.8889    23.8889    23.8889
+   PRES   BAR             3.4474     3.4474     3.4474
+   VFRAC                  0.0        0.0        0.0   
+   LFRAC                  1.0000     1.0000     1.0000
+   SFRAC                  0.0        0.0        0.0   
+ ENTHALPY:           
+   CAL/MOL            -6.6089+04 -7.8228+04 -6.8704+04
+   CAL/GM             -2403.2045  -781.0209 -1592.1127
+   CAL/SEC            -3.0280+04 -9840.6979 -4.0121+04
+ ENTROPY:            
+   CAL/MOL-K            -46.3096  -147.0862   -66.9839
+   CAL/GM-K              -1.6840    -1.4685    -1.5523
+ DENSITY:            
+   MOL/CC              3.1899-02  7.9616-03  1.9767-02
+   GM/CC                  0.8772     0.7974     0.8530
+ AVG MW                  27.5005   100.1607    43.1528
+ ASPEN PLUS   PLAT: WIN-X64   VER: 38.0                   03/21/2025  PAGE 6       
+                                  TUTORIAL1                                     
+                             PROBLEM STATUS SECTION                             
+
+ BLOCK STATUS                            
+ ------------
+
+ ****************************************************************************
+ *                                                                          *
+ * Calculations were completed normally                                     *
+ *                                                                          *
+ * All Unit Operation blocks were completed normally                        *
+ *                                                                          *
+ * All streams were flashed normally                                        *
+ *                                                                          *
+ ****************************************************************************

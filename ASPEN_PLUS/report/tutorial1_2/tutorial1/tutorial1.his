@@ -1,0 +1,157 @@
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION HISTORY                     + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 21, 2025      
+ VERSION: 38.0   Build 380                               FRIDAY      
+ INSTALLATION:                                           3:39:06 P.M.        
+
+ THIS COPY OF ASPEN PLUS LICENSED TO INDIAN INSTITUTE OF TECH        
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+ *** INPUT SUMMARY ***
+
+ >>CURRENT RUN
+
+   ORIGINAL RUN                           MARCH 21, 2025      
+   3:39:06 P.M.                           FRIDAY      
+   INPUT FILE: _3256iyq.inm
+   RUN ID : _3256iyq
+          1    ;
+          2    ;Input file created by Aspen Plus Rel. 38.0 at 15:39:06 Fri Mar 21, 2025
+          3    ;Directory   Runid _E6D8
+          4    ;
+          5
+          6
+          7    DYNAMICS
+          8        DYNAMICS RESULTS=ON
+          9
+         10    TITLE 'tutorial1'
+         11
+         12    IN-UNITS MET PRESSURE=bar TEMPERATURE=C DELTA-T=C PDROP=bar  &
+         13            INVERSE-PRES='1/bar' SHORT-LENGTH=mm
+         14
+         15    DEF-STREAMS CONVEN ALL
+         16
+         17    DATABANKS 'APV120 PURE38' / 'APV120 AQUEOUS' / 'APV120 SOLIDS' &
+         18             / 'APV120 INORGANIC' / 'APESV120 AP-EOS' /  &
+         19            'NISTV120 NIST-TRC' / NOASPENPCD
+         20
+         21    PROP-SOURCES 'APV120 PURE38' / 'APV120 AQUEOUS' /  &
+         22            'APV120 SOLIDS' / 'APV120 INORGANIC' / 'APESV120 AP-EOS' &
+         23             / 'NISTV120 NIST-TRC'
+         24
+         25    COMPONENTS
+         26        WATER H2O /
+         27        ACETONE C3H6O-1 /
+         28        MIBK C6H12O-2
+         29
+         30    SOLVE
+         31        RUN-MODE MODE=SIM
+         32
+         33    FLOWSHEET
+         34        BLOCK B1 IN=FEED MIBK1 OUT=PRODUCT1
+         35
+         36    PROPERTIES IDEAL
+         37
+         38    STREAM FEED
+         39        SUBSTREAM MIXED TEMP=75. <F> PRES=50. <psi>  &
+         40            MASS-FLOW=100. <lb/hr>
+         41        MASS-FRAC WATER 0.5 / ACETONE 0.5 / MIBK 0.
+         42
+         43    STREAM MIBK1
+         44        SUBSTREAM MIXED TEMP=75. <F> PRES=50. <psi>  &
+         45            MASS-FLOW=100. <lb/hr>
+         46        MASS-FRAC WATER 0. / ACETONE 0. / MIBK 1.
+         47
+         48    BLOCK B1 MIXER
+         49        PARAM NPHASE=1 PHASE=L
+         50        BLOCK-OPTION FREE-WATER=NO
+         51
+         52    EO-CONV-OPTI
+         53
+         54    STREAM-REPOR MOLEFLOW
+         55    ;
+         56    ;
+         57    ;
+         58    ;
+         59    ;
+ *** INPUT TRANSLATOR MESSAGES ***
+
+  *** THIS RUN USES THE PROPERTIES ENTERPRISE DATABASE ***
+      SQLLOCALDB.APESV120 : (DATAVERSION - 38.0.0.14)                         
+      SQLLOCALDB.APV120 : (DATAVERSION - 38.0.0.20)                           
+      SQLLOCALDB.FACTV120 : (DATAVERSION - 38.0.0.1)                          
+      SQLLOCALDB.NISTV120 : (DATAVERSION - 38.0.0.12)                         
+ 
+ 
+
+ PDF updated                                                                      TIME =      2.01
+
+ *** CALCULATION TRACE ***
+
+ TUTORIAL1                                                       
+
+ *** FLOWSHEET ANALYSIS MESSAGES ***
+
+ FLOWSHEET CONNECTIVITY BY STREAMS       
+
+   STREAM     SOURCE     DEST           STREAM     SOURCE     DEST
+   MIBK1      ----       B1             FEED       ----       B1      
+   PRODUCT1   B1         ----                                         
+
+ FLOWSHEET CONNECTIVITY BY BLOCKS        
+
+   BLOCK        INLETS                         OUTLETS
+   B1           FEED MIBK1                     PRODUCT1                    
+
+      COMPUTATION ORDER FOR THE FLOWSHEET IS:
+      B1 
+
+Calculations begin                                                              time      0.05
+
+
+ SIMULATION CALCULATIONS BEGIN                                                    TIME =      0.05
+
+      ENTHALPY CALCULATION FOR INLET STREAM FEED OF BLOCK B1                      TIME =      0.05
+      KODE = 2  NTRIAL =   1  T = 297.0389  P =  344738.      V =  0.00000      Q =  0.00000    
+
+      ENTHALPY CALCULATION FOR INLET STREAM MIBK1 OF BLOCK B1                     TIME =      0.05
+      KODE = 2  NTRIAL =   1  T = 297.0389  P =  344738.      V =  0.00000      Q =  0.00000    
+
+      UOS BLOCK B1       MODEL: MIXER                                             TIME =      0.05
+      KODE = 1   NO. TEMP ITER =    4     TEMP =  297.039    
+      KPHASE =    2 KODE =    1 T =  297.039     P =  344738.     Q =  0.00000    
+
+ Report Writer entered                                                            Time =     42.68
+
+ Report file generated                                                            Time =     42.68
+
+ Report Writer entered                                                            Time =     69.33
+
+ Results generated                                                                Time =     69.33
+
+RUN SAVED
+
+
+
+ NO ERRORS OR WARNINGS GENERATED

@@ -1,0 +1,105 @@
+
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + +                                                                         + +
+ + +                      ASPEN PLUS CALCULATION HISTORY                     + +
+ + +                                                                         + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+ + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + + +
+
+ ASPEN PLUS IS A TRADEMARK OF           HOTLINE:
+ ASPEN TECHNOLOGY, INC.                 U.S.A. 888/996-7100
+ 781/221-6400                           EUROPE (44) 1189-226555
+
+ PLATFORM: WIN-X64                                       MARCH 21, 2025      
+ VERSION: 38.0   Build 380                               FRIDAY      
+ INSTALLATION:                                           3:24:04 P.M.        
+
+ THIS COPY OF ASPEN PLUS LICENSED TO INDIAN INSTITUTE OF TECH        
+
+
+      ASPEN PLUS (R) IS A PROPRIETARY PRODUCT OF ASPEN TECHNOLOGY, INC.
+      (ASPENTECH), AND MAY BE USED ONLY UNDER AGREEMENT WITH ASPENTECH.
+      RESTRICTED RIGHTS LEGEND:  USE, REPRODUCTION, OR DISCLOSURE BY THE
+      U.S. GOVERNMENT IS SUBJECT TO RESTRICTIONS SET FORTH IN 
+      (i) FAR 52.227-14, Alt. III, (ii) FAR 52.227-19, (iii) DFARS 
+      252.227-7013(c)(1)(ii), or (iv) THE ACCOMPANYING LICENSE AGREEMENT,
+      AS APPLICABLE. FOR PURPOSES OF THE FAR, THIS SOFTWARE SHALL BE DEEMED
+      TO BE "UNPUBLISHED" AND LICENSED WITH DISCLOSURE PROHIBITIONS.
+      CONTRACTOR/SUBCONTRACTOR: ASPEN TECHNOLOGY, INC. 20 CROSBY DRIVE,
+      BEDFORD, MA 01730.
+ *** INPUT SUMMARY ***
+
+ >>CURRENT RUN
+
+   ORIGINAL RUN                           MARCH 21, 2025      
+   3:24:04 P.M.                           FRIDAY      
+   INPUT FILE: _2300kkq.inm
+   RUN ID : _2300kkq
+          1    ;
+          2    ;Input file created by Aspen Plus Rel. 38.0 at 15:24:04 Fri Mar 21, 2025
+          3    ;Directory C:\Users\adity\Desktop\ongoing\cape_lab\postmidsem\report\practise\practice1  Runid PRACTICE1
+          4    ;
+          5
+          6
+          7    PROP
+          8
+          9    DYNAMICS
+         10        DYNAMICS RESULTS=ON
+         11
+         12    TITLE 'tutorial1'
+         13
+         14    IN-UNITS SI SHORT-LENGTH=mm
+         15
+         16    ACCOUNT-INFO PROJECT-NAME="CAPE LAB" USER-NAME="ADITYA DEEP"
+         17
+         18    DATABANKS 'APV120 PURE38' / 'APV120 AQUEOUS' / 'APV120 SOLIDS' &
+         19             / 'APV120 INORGANIC' / 'APESV120 AP-EOS' /  &
+         20            'NISTV120 NIST-TRC' / NOASPENPCD
+         21
+         22    PROP-SOURCES 'APV120 PURE38' / 'APV120 AQUEOUS' /  &
+         23            'APV120 SOLIDS' / 'APV120 INORGANIC' / 'APESV120 AP-EOS' &
+         24             / 'NISTV120 NIST-TRC'
+         25
+         26    COMPONENTS
+         27        ETHANE C2H6
+         28
+         29    PROPERTIES PPR78
+         30        PROPERTIES IDEAL
+         31
+         32    PROP-TABLE PURE-1 PROPS
+         33        IN-UNITS SI TEMPERATURE=C SHORT-LENGTH=mm
+         34        ANALYSIS ANAL-TYPE=PURE PURE-PROP='PL' PURE-PHASES= L
+         35        MOLE-FLOW ETHANE 1
+         36        PROPERTIES PPR78 FREE-WATER=STEAM-TA SOLU-WATER=3  &
+         37            TRUE-COMPS=YES
+         38        VARY TEMP
+         39        RANGE VARVALUE=LIST LIST=15. 20. 25. 30. 35. 40.
+         40        VARY PRES
+         41        RANGE LIST=1.01325000E+5
+         42        PARAM
+         43    ;
+         44    ;
+         45    ;
+         46    ;
+         47    ;
+ *** INPUT TRANSLATOR MESSAGES ***
+
+  *** THIS RUN USES THE PROPERTIES ENTERPRISE DATABASE ***
+      SQLLOCALDB.APESV120 : (DATAVERSION - 38.0.0.14)                         
+      SQLLOCALDB.APV120 : (DATAVERSION - 38.0.0.20)                           
+      SQLLOCALDB.FACTV120 : (DATAVERSION - 38.0.0.1)                          
+      SQLLOCALDB.NISTV120 : (DATAVERSION - 38.0.0.12)                         
+
+ PDF updated                                                                      TIME =      1.72
+
+ *** CALCULATION TRACE ***
+
+ TUTORIAL1                                                       
+
+
+ Table Generation begins                                                          Time =      0.03
+
+      BEGIN CALCULATIONS FOR PROP-TABLE PURE-1                                    TIME =      0.03
+
+ Results generated                                                                Time =      0.03
