@@ -1,0 +1,30 @@
+%first order ODE
+
+%function definition
+f1 = @(y) y(2);
+f2 = @(y) 1000*(1-y(1)^2)*y(2)-y(1);
+
+%initial value
+y0 = [2, 0];
+
+%step size 
+h = 1; %sec
+
+y = y0;
+
+for t = 0:3000
+    k11 = t*f1(y);
+    k12 = t*f1(y+k11/2);
+    k13 = t*f1(y+k12/2);
+    k14 = t*f1(y+k13);
+    y = y + (k11+2*k12+2*k13+k14);
+
+    k21 = t*f2(y);
+    k22 = t*f2(y+k11/2);
+    k23 = t*f2(y+k12/2);
+    k24 = t*f2(y+k13);
+    y = y + (k21+2*k22+2*k23+k24);
+
+end
+
+y[1]
